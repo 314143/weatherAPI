@@ -17,7 +17,7 @@ public class FetchWeatherService {
     }
 
     private String buildQuery(String city, int numberOfDays) {
-        return "http://api.weatherapi.com/v1/forecast.json?key=3e3f2c19f9044388b3d185551222312&q=" +
+        return "http://api.weatherapi.com/v1/forecast.json?key=TOKEN_HERE&q=" +
                 city +
                 "&days=" +
                 numberOfDays +
