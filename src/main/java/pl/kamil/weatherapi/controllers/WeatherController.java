@@ -24,16 +24,13 @@ public class WeatherController {
         List<String> cities = new ArrayList<>(List.of("Warsaw", "Cracow", "Lodz", "Wroclaw", "Poznan"));
         MyForecast myForecast = new MyForecast();
 
-        try {
+
 //            System.out.println(weatherService.downloadWeather(cities.get(0)));
             for (String city:
                  cities) {
                 myForecast.addLocation(weatherService.downloadWeather(city));
             }
-        }
-        catch (Exception e) {
-            System.err.println(e.getMessage()); //TODO: Better error handling
-        }
+
         return myForecast;
     }
 }
