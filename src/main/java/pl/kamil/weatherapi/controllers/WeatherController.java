@@ -23,13 +23,10 @@ public class WeatherController {
     public MyForecast weather() {
         List<String> cities = new ArrayList<>(List.of("Warsaw", "Cracow", "Lodz", "Wroclaw", "Poznan"));
         MyForecast myForecast = new MyForecast();
-
-
-//            System.out.println(weatherService.downloadWeather(cities.get(0)));
-            for (String city:
-                 cities) {
-                myForecast.addLocation(weatherService.downloadWeather(city));
-            }
+        for (String city :
+                cities) {
+            myForecast.addLocation(weatherService.downloadWeather(city));
+        }
 
         return myForecast;
     }
